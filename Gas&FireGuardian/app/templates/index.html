@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-Time Sensor Dashboard</title>
+    <!-- Update the link to CSS using url_for -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Update the src for your JS files using url_for -->
+    <!-- Include Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <!-- Include Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <!-- Include Chart.js Moment Adapter AFTER Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@1.0.0/dist/chartjs-adapter-moment.min.js"></script>
+
+</head>
+<body>
+    <div class="dashboard-header">
+        <h1>Real-Time Sensor Dashboard</h1>
+        <p>This is a sample replica "Reports overview".</p>
+    </div>
+
+    <div class="date-range">
+        <button id="date-range-btn">Last 30 days</button>
+        <span id="date-range">Sep 27—Oct 27</span>
+    </div>
+    <div class="sensor-container">
+        <!-- Sensor Field 1 -->
+        <div class="sensor-field">
+            <h2>Room Temperature</h2>
+            <canvas id="sensorField1Chart"></canvas>
+<!--            <div id="field1-data" class="sensor-value">To be filled</div>-->
+<!--            <div class="sensor-info">To be filled</div>-->
+            <div class="warning-indicator" id="warning-indicator-1">
+                <span class="warning-icon"></span>Warning: High reading detected!
+            </div>
+        </div>
+
+        <!-- Sensor Field 2 -->
+        <div class="sensor-field">
+            <h2>Gas Indicator</h2>
+            <canvas id="sensorField2Chart"></canvas>
+<!--            <div id="field2-data" class="sensor-value">To be filled</div>-->
+<!--            <div class="sensor-info">To be filled</div>-->
+            <div class="warning-indicator" id="warning-indicator-2">
+                <span class="warning-icon"></span>Warning: High reading detected!
+            </div>
+        </div>
+
+        <!-- Sensor Field 3 -->
+        <div class="sensor-field">
+            <h2>Humidity</h2>
+            <canvas id="sensorField3Chart"></canvas>
+<!--            <div id="field3-data" class="sensor-value">To be filled</div>-->
+<!--            <div class="sensor-info">To be filled</div>-->
+            <div class="warning-indicator" id="warning-indicator-3">
+                <span class="warning-icon"></span>Warning: High reading detected!
+            </div>
+        </div>
+
+        <!-- Repeat for other fields... -->
+    </div>
+
+    <!-- Include JavaScript file for real-time data fetching and updating -->
+    <script src="{{ url_for('static', filename='js/sensor-data.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+</body>
+</html>

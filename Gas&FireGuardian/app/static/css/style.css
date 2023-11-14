@@ -1,0 +1,100 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+}
+
+.dashboard-header {
+    text-align: center;
+    padding: 20px;
+}
+
+.date-range {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin: 20px 0;
+}
+
+.date-range #date-range-btn {
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.sensor-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 50px;
+}
+
+.sensor-field {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(50% - 20px); /* Increase the width to half of the container minus margin for larger fields */
+    text-align: center;
+    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+}
+
+.sensor-field canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.sensor-value {
+    font-size: 2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.sensor-info {
+    font-size: 0.9em;
+    color: #777777;
+}
+
+/* Button styling for field selectors */
+.field-selector-button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #008CBA; /* Blue background */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.field-selector-button:hover {
+    background-color: #005f73; /* Darker blue on hover */
+}
+
+/* Warning Indicator Style */
+.warning-indicator {
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #ff3b30; /* Red color for high visibility */
+    display: none; /* Hidden by default */
+}
+
+/* Icon for visual cue */
+.warning-icon {
+    display: inline-block;
+    margin-right: 5px;
+    /* Use a Unicode triangle or similar symbol, or an icon font if available */
+    content: "⚠️"; /* Unicode warning sign */
+}
+
